@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { RouteObject, useRoutes } from 'react-router-dom';
 import Home from '../screens/Home/Home.screen';
+import RoomScene from '../screens/RoomScene/RoomScene.screen';
 
 const RoomSceneRoutes = [{ path: 'abc', element: <div>Child</div> }];
 
@@ -11,7 +12,7 @@ export const MainRoutes: RouteObject[] = [
   },
   {
     path: 'room-scene',
-    element: <Home />,
+    element: <RoomScene />,
     children: [...RoomSceneRoutes],
   },
 ];

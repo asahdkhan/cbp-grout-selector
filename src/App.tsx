@@ -1,13 +1,18 @@
-import React from 'react';
+import { ThemeProvider } from '@emotion/react';
 import { HashRouter } from 'react-router-dom';
+import Styles from './Global.styles';
 import Screens from './screens';
+import Theme from './Theme.styles';
 
 function App() {
   return (
     <div className="App">
-      <HashRouter>
-        <Screens />
-      </HashRouter>
+      <ThemeProvider theme={Theme}>
+        <Styles />
+        <HashRouter>
+          <Screens />
+        </HashRouter>
+      </ThemeProvider>
     </div>
   );
 }
