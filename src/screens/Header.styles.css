@@ -43,8 +43,61 @@ body .PasswordLabelBox {
   color:  #E17512;
   border: none;
 }
+/* .headerRightSide svg.MuiSvgIcon-root {
+  font-size: 26px;
+} */
+.AccountDetailBtn svg {
+  color:#1F2127;
+  font-size: 25px;
+}
+.AccountBox .AccountHeading {
+  color: #E17512;
+}
+.AccountTabContent .AccountDetails, .UpdateEmailInfo {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.AccountDetails .DeleteLink {
+  padding: 0;
+  color:#D3314C;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.AccountDetails .DeleteLink:hover {
+  border: none;
+  color:#1F2127;
+}
+.TextFieldReadOnly .MuiInputBase-root.MuiInput-root.MuiInput-underline:before {
+  border-bottom: none!important;
+}
+.TextFieldReadOnly .MuiInputBase-root.MuiInput-root:after {
+  border-bottom: none!important;
+}
+.TextEditBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.FooterButton {
+  display: flex;
+  align-items: center;
+}
+.FooterButton>:not(:first-of-type) {
+  margin-left: 8px;
+}
+.TextEditBox a {
+  text-decoration: none;
+  font-weight: 600;
+}
+.NoteBox { 
+  display: inline-block;
+   padding-left: 10px;
+}
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .AgreeCheckbox .MuiTypography-root, .PasswordInfo {
     font-size: 12px;
   }
+  .TextEditBox a {
+    font-size: 14px;
+}
 }

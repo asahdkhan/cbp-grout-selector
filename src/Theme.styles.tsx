@@ -7,7 +7,7 @@ const theme = createTheme({
       contrastText: '#fff',
     },
     secondary: {
-      main: '#a29c99',
+      main: '#E53451',
       contrastText: '#fff',
     },
   },
@@ -170,6 +170,14 @@ const theme = createTheme({
               boxShadow: 'none',
               color: '#fff',
               border: '1px solid #E17512',
+              textTransform: 'capitalize',
+            }),
+          ...(ownerState.variant === 'contained' &&
+            ownerState.color === 'secondary' && {
+              backgroundColor: '#E53451',
+              boxShadow: 'none',
+              color: '#fff',
+              border: '1px solid #E53451',
               textTransform: 'capitalize',
             }),
           ...(ownerState.variant === 'outlined' &&

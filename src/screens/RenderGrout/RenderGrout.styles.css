@@ -12,7 +12,7 @@ body .OptionsButton {
   min-width: 40px;
 }
 .OptionsPopoverBox {
-  padding: 10px 15px;
+  padding: 10px 0px;
   box-shadow: 0px 8px 16px rgb(0 0 0 / 12%);
   border-radius: 8px;
   background: #FFFFFF;
@@ -24,6 +24,10 @@ body .OptionsButton {
   color: rgba(0, 0, 0, 0.87);
   text-decoration: none;
   margin-bottom: 10px;
+}
+.OptionsPopoverBox li  {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .OptionsPopoverBox li:last-child a {
   margin-bottom: 0px;
