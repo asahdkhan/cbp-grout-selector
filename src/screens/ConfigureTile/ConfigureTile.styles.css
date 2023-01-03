@@ -1,0 +1,43 @@
+.CropPhotoHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+body .CommonLinkButton {
+  border: none;
+  background: none;
+  color: #000;
+}
+
+.CropPhotoCanvas {
+  margin: 0 auto;
+  display: table;
+}
+
+.MultipleIcon {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: rgba(0, 0, 0, 0.38);
+  font-size: 27px;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 350px) {
+
+  .CropPhotoHeader .CommonLinkButton,
+  .CropPhotoHeader .CommonGrayButton,
+  .CropPhotoHeader .UsePhotoButton {
+    font-size: 11px !important;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+  .CropPhotoHeader .CommonLinkButton,
+  .CropPhotoHeader .CommonGrayButton,
+  .CropPhotoHeader .UsePhotoButton {
+    font-size: 12px;
+  }
+}

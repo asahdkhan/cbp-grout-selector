@@ -1,0 +1,122 @@
+.Subtitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.PhotoInfo {
+  display: table;
+  margin: 25px auto 20px;
+  text-align: center;
+}
+
+.PhotoInfo ul li {
+  list-style: circle !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+ul.CustomList li::before {
+  position: relative;
+  left: 0;
+  min-width: 7px;
+  min-height: 7px;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: block;
+  content: '';
+  border-radius: 25px;
+  margin-right: 7px;
+}
+
+
+body .DefaultTile {
+  min-width: calc(16.66% - 8px);
+  max-width: calc(16.66% - 8px);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px;
+  padding: 4px 5px;
+  display: flex;
+  aspect-ratio: 1/1;
+}
+
+body .AddYourPhotoBox {
+  min-width: 120px;
+  min-height: 120px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 5px;
+  display: flex;
+}
+
+.DefaultTile,
+.DefaultTile:hover {
+  border: none !important;
+}
+
+
+.AddYourPhotoBox h6 {
+  font-size: 14px;
+}
+
+.AddYourPhotoBox svg {
+  font-size: 35px;
+}
+
+.DefaultTileContainer Button {
+  margin-bottom: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.DefaultTileContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-height: 490px;
+  overflow-x: auto;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  body .DefaultTile {
+    min-width: calc(33.33% - 8px);
+  }
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+  body .AddYourPhotoBox {
+    min-width: 100px;
+    min-height: 100px;
+  }
+
+  .AddYourPhotoBox svg {
+    font-size: 25px;
+  }
+
+  .AddYourPhotoBox h6 {
+    font-size: 13px;
+  }
+
+  .PhotoInfo {
+    text-align: left;
+  }
+
+  .PhotoInfo ul li,
+  .Subtitle,
+  .TileBannerTitle {
+    justify-content: flex-start;
+  }
+
+  body .AddYourPhotoBox {
+    margin-left: 4px;
+    margin-right: inherit;
+  }
+
+}

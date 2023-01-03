@@ -30,6 +30,8 @@ import CreateNewFolderOutlinedIcon from '@mui/icons-material/CreateNewFolderOutl
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
+import CheckIcon from '@mui/icons-material/Check';
+import SelectGroutColor from '../../components/SelectGroutColor/SelectGroutColor.components';
 // import RoomChange from '../../assets/images/changeicon.png';
 // import { ReactComponent as RoomChange } from '../../assets/images/changeicon.svg';
 
@@ -174,7 +176,7 @@ const RenderGrout = () => {
                   </Box>
                   <Box className="TabContent">
                     <TabPanel value={value} index={0}>
-                      <Paper className="TileSelection">
+                      {/* <Paper className="TileSelection">
                         <Typography variant="h6" className="TitleOption">
                           <b>Tile Selection</b>
                         </Typography>
@@ -214,8 +216,8 @@ const RenderGrout = () => {
                             </Box>
                           </Grid>
                         </Grid>
-                      </Paper>
-                      <Paper className="TilePattern">
+                      </Paper> */}
+                      <Paper className="TilePattern ZeroTop">
                         <Typography variant="h6" className="TitleOption">
                           <b>Tile Pattern</b>
                         </Typography>
@@ -325,9 +327,7 @@ const RenderGrout = () => {
                               <Box
                                 className="TileImageSecond"
                                 style={{
-                                  backgroundImage: `url(
-                      ${require(`../../assets/images/CBPTileGroutBanner.jpg`)}
-                    )`,
+                                  backgroundColor: `#E1DCCF`,
                                 }}
                               >
                                 <Box className="CancelIcon">
@@ -345,9 +345,7 @@ const RenderGrout = () => {
                               <Box
                                 className="TileImageSecond"
                                 style={{
-                                  backgroundImage: `url(
-                      ${require(`../../assets/images/CBPTileGroutBanner.jpg`)}
-                    )`,
+                                  backgroundColor: `#787679`,
                                 }}
                               >
                                 <Box className="CancelIcon">
@@ -438,92 +436,7 @@ const RenderGrout = () => {
                                 </IconButton>
                               </Box>
                             </Box>
-                            <Box className="SelectGroutColourGrid LightSkyBlue">
-                              <Grid
-                                container
-                                direction="row"
-                                justifyContent="flex-start"
-                                className=""
-                                columnSpacing={2}
-                              >
-                                <Grid item xs={4}>
-                                  <Box className="GroutColourGrid">
-                                    <Box className="GroutGridColourCanvas">
-                                      <img
-                                        src={require('../../assets/images/GroutGrid.png')}
-                                        alt=""
-                                      />
-                                    </Box>
-
-                                    <Box className="GroutColourName">
-                                      <Box className="GroutColourInner">
-                                        <Typography variant="h6">
-                                          <AddIcon className="OrangeColor" />
-                                        </Typography>
-                                        <Typography variant="body2" className="ColourName">
-                                          Select color
-                                        </Typography>
-                                      </Box>
-                                    </Box>
-                                  </Box>
-                                </Grid>
-                                <Grid item xs={4}>
-                                  <Box className="GroutColourGrid">
-                                    <Box className="GroutGridColourCanvas">
-                                      <img
-                                        src={require('../../assets/images/GroutGrid.png')}
-                                        alt=""
-                                      />
-                                    </Box>
-
-                                    <Box
-                                      className="GroutColourName"
-                                      style={{ backgroundColor: '#E0DCD0' }}
-                                    >
-                                      <Box className="GroutColourInner">
-                                        <Typography variant="h6">#11</Typography>
-                                        <Typography variant="body2" className="ColourName">
-                                          Snow White
-                                        </Typography>
-                                      </Box>
-                                    </Box>
-                                  </Box>
-                                </Grid>
-                                <Grid item xs={4}>
-                                  <Box className="GroutColourGrid">
-                                    <Box className="GroutGridColourCanvas">
-                                      <img
-                                        src={require('../../assets/images/GroutGrid.png')}
-                                        alt=""
-                                      />
-                                    </Box>
-
-                                    <Box className="GroutColourName">
-                                      <Box className="GroutColourInner">
-                                        <Typography variant="h6">
-                                          <AddIcon className="OrangeColor" />
-                                        </Typography>
-                                        <Typography variant="body2" className="ColourName">
-                                          Select color
-                                        </Typography>
-                                      </Box>
-                                    </Box>
-                                  </Box>
-                                </Grid>
-                              </Grid>
-                            </Box>
-                            <Box className="SelectGroutColourOptions">
-                              <Box>
-                                <Typography variant="h5">GROUT COLOR (40 OPTIONS)</Typography>
-                              </Box>
-                              <Box className="SelectGroutColourSlider"></Box>
-                              <Box className="SelectGroutColourName">
-                                <Typography variant="h5">
-                                  <span className="DisableColour">No Color Selected</span>
-                                  <span>#11 - Snow White</span>
-                                </Typography>
-                              </Box>
-                            </Box>
+                            <SelectGroutColor />
                           </Paper>
                         </SwipeableDrawer>
                       </Box>

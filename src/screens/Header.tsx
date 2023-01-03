@@ -28,6 +28,8 @@ import {
   Tab,
   Tabs,
 } from '@mui/material';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import CreateNewFolderOutlinedIcon from '@mui/icons-material/CreateNewFolderOutlined';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
@@ -164,7 +166,12 @@ const Header = () => {
                     </ListItem>
                     <ListItem>
                       <Link>
-                        <AccountCircleIcon /> Saved Scenes
+                        <CreateNewFolderOutlinedIcon /> Saved Scenes
+                      </Link>
+                    </ListItem>
+                    <ListItem>
+                      <Link>
+                        <TrendingUpIcon /> Visualizer Analytics
                       </Link>
                     </ListItem>
                     <Divider></Divider>

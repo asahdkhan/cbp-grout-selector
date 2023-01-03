@@ -1,23 +1,39 @@
 body .GroutBox {
   background-color: transparent;
 }
+
 .ChangeRoomBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 body .OptionsButton {
   padding-left: 0px;
   padding-right: 0px;
   min-width: 40px;
 }
+
+body .MuiPopover-paper {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: none !important;
+  border-radius: 8px;
+}
+
 .OptionsPopoverBox {
   padding: 10px 0px;
-  box-shadow: 0px 8px 16px rgb(0 0 0 / 12%);
+
   border-radius: 8px;
   background: #FFFFFF;
   /* min-width: 240px; */
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
+
+.OptionsPopoverBox ul {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .OptionsPopoverBox li a {
   display: flex;
   align-items: center;
@@ -25,116 +41,160 @@ body .OptionsButton {
   text-decoration: none;
   margin-bottom: 10px;
 }
-.OptionsPopoverBox li  {
+
+.OptionsPopoverBox li {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .OptionsPopoverBox li:last-child a {
   margin-bottom: 0px;
 }
-.OptionsPopoverBox li a:hover { 
+
+.OptionsPopoverBox li a:hover {
   color: #E17512;
 }
-.OptionsPopoverBox li a svg {
+
+.OptionsPopoverBox li a svg,
+.OptionsPopoverBox li a img {
   margin-right: 8px;
 }
+
 .GroutContentBox {
   min-height: 400px;
 }
+
 .GroutCanvas {
   margin-top: 30px;
   border-radius: 6px;
   overflow: hidden;
 }
+
 .TabHeader {
   border-bottom: 1px solid #e0e0e0;
 }
+
 .TabHeader .MuiTabs-flexContainer {
   flex-direction: row;
   width: 100%;
 }
+
 .TabHeader .MuiButtonBase-root.MuiTab-root {
-    flex: 1 1 0px;
-    max-width: inherit;
+  flex: 1 1 0px;
+  max-width: inherit;
 }
+
 .TileImage {
   width: 100%;
   min-height: 100px;
   border-radius: 6px;
   height: 100%;
 }
+
 .TileImageSecond {
   width: 100%;
   min-height: 100px;
   border-radius: 6px;
   border: 2px solid #fff;
   position: relative;
-  transition: a11 1s ease-in-out;
+  transition: all 1s ease;
+  /* aspect-ratio: 1/1; */
 }
+
 .TabContent {
   padding: 25px 0px;
 }
+
 body .TitleOption {
   padding-bottom: 15px;
   color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
 }
+
 .TilePattern {
   margin-top: 40px;
 }
+
 .PatternInfoBtn {
   border: 2px solid #e0e0e0;
   border-radius: 6px;
   padding: 15px 10px 10px 10px;
-  text-align: center; 
-  transition: a11 1s ease-in-out;
+  text-align: center;
+  transition: all 1s ease;
   margin-bottom: 16px;
   min-height: 74px;
 }
+
 .PatternInfoBtn.GroutWidth {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* aspect-ratio: 1/1; */
 }
+
 .PatternInfoBtn .MuiTypography-root {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
 }
+
 .TileInfo span {
   font-weight: 400;
 }
-.PatternInfoBtn:hover, .PatternInfoBtn:hover .MuiTypography-root, .PatternInfoBtn.Selected, .PatternInfoBtn.Selected .MuiTypography-root, .PatternInfoBtn.GroutWidth:hover .MuiTypography-body2, .PatternInfoBtn.GroutWidth:hover .MuiTypography-root, .PatternInfoBtn.GroutWidth.Selected .MuiTypography-root, .GroutColourGrid:hover, .GroutColourGrid.Selected:hover {
+
+.ZeroTop {
+  margin-top: 0px !important;
+}
+
+.PatternInfoBtn:hover,
+.PatternInfoBtn:hover .MuiTypography-root,
+.PatternInfoBtn.Selected,
+.PatternInfoBtn.Selected .MuiTypography-root,
+.PatternInfoBtn.GroutWidth:hover .MuiTypography-body2,
+.PatternInfoBtn.GroutWidth:hover .MuiTypography-root,
+.PatternInfoBtn.GroutWidth.Selected .MuiTypography-root,
+.GroutColourGrid:hover,
+.GroutColourGrid.Selected:hover {
   cursor: pointer;
   color: #E17512;
   border-color: #E17512;
-  transition: a11 1s ease-in-out;
+  transition: all 1s ease;
   background: #FCF1E7;
 }
+
 .PatternImage {
   display: inline-block;
   margin-bottom: 5px;
-  transition: a11 1s ease-in-out;
+  transition: all 1s ease;
 }
+
 .PatternInfoBtn .PatternIcon {
   opacity: 1;
-    display: block;
+  display: block;
 }
+
 .PatternInfoBtn .PatternIconHover {
   opacity: 0;
-    display: none;
+  display: none;
 }
+
 .PatternInfoBtn:hover .PatternIcon {
   opacity: 0;
-    display: none;
+  display: none;
 }
+
 .PatternInfoBtn:hover .PatternIconHover {
   opacity: 1;
-    display: block;
+  display: block;
 }
+
 .GridRow.GridRowSecond {
   padding-bottom: 10px;
 }
-.TileInfo { padding-bottom: 10px;}
+
+.TileInfo {
+  padding-bottom: 10px;
+}
+
 body .GroutName {
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
@@ -142,25 +202,59 @@ body .GroutName {
   line-height: 17px;
   padding: 8px 5px 5px 5px;
 }
+
 .GroutName span {
   display: block;
   text-align: center;
 }
+
 .GroutColour {
-  transition: a11 1s ease-in-out;
+  transition: all 1s ease;
 }
-.GroutColour:hover .TileImageSecond, .GroutColour.Selected .TileImageSecond {
+
+.GroutColour:hover .TileImageSecond,
+.GroutColour.Selected .TileImageSecond {
   border-color: #E17512;
-  transition: a11 1s ease-in-out;
+  transition: all 1s ease;
 }
-.GroutColour:hover .GroutName, .GroutColour.Selected .GroutName {
+
+.GroutColour:hover .GroutName,
+.GroutColour.Selected .GroutName {
   color: rgba(0, 0, 0, 0.87);
-  transition: a11 1s ease-in-out;
+  transition: all 1s ease;
 }
-.GroutColour:hover .CancelIcon, .GroutColour.Selected .CancelIcon {
+
+.GroutColour:hover .CancelIcon,
+.GroutColour.Selected .CancelIcon,
+.GroutColorButton:hover .CheckIcon,
+.GroutColorButton.Selected .CheckIcon {
   opacity: 1;
-  transition: a11 1s ease-in-out;
+  transition: all 1s ease;
 }
+
+.GroutColorButton .CheckIcon {
+  opacity: 0;
+  transition: all 1s ease;
+  color: #000;
+  font-size: 30px;
+}
+
+
+.GroutColorOptionContent .GroutColorButton {
+  margin: 4px 4px 4px 4px;
+  border: 2px solid #fff;
+  width: calc(16.66% - 8px);
+  height: 100%;
+  min-width: calc(16.66% - 8px);
+  min-height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.GroutColorOptionContent .GroutColorButton:hover {
+  border: 2px solid #E17512;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+}
+
 .CancelIcon {
   color: #fff;
   display: flex;
@@ -170,22 +264,27 @@ body .GroutName {
   top: 5px;
   right: 5px;
   opacity: 0;
-  transition: a11 1s ease-in-out;
+  transition: all 1s ease;
 }
+
 .PatternInfoBtn.GroutWidth {
   /* padding: 20px 10px; */
 }
+
 .PatternInfoBtn.GroutWidth .MuiTypography-root {
   color: rgba(0, 0, 0, 0.87);
 }
+
 .PatternInfoBtn.GroutWidth .MuiTypography-body2 {
   font-size: 14px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
 }
+
 .CommonDrawerBox {
   /* padding: 25px 25px; */
 }
+
 .SelectGroutColourHeader {
   display: flex;
   align-items: center;
@@ -194,15 +293,20 @@ body .GroutName {
   padding-left: 25px;
   padding-right: 25px;
 }
+
 .SelectGroutColourGrid {
   padding: 25px 25px;
 }
+
 .OrangeColor {
   color: #E17512;
 }
+
 .SwipeableDrawerBox .MuiPaper-root.MuiDrawer-paper {
   min-width: 500px;
+  max-width: 500px;
 }
+
 .GroutColourName {
   display: flex;
   justify-content: center;
@@ -212,56 +316,99 @@ body .GroutName {
   padding: 10px 5px;
   background-color: #fff;
 }
+
 .GroutColourGrid {
   border: 2px solid #e0e0e0;
-  max-width: 140px;
+  /* max-width: 140px; */
 }
+
 .ColourName {
   text-transform: uppercase;
 }
+
 .GroutColourInner .MuiTypography-root {
   line-height: 1.2em;
   min-height: 24px;
 }
+
 .GroutColourInner .MuiTypography-root svg {
   line-height: 1.2em;
   font-size: 16px;
 }
+
 .SelectGroutColourOptions {
   padding: 25px 25px;
 }
+
 .DisableColour {
   color: rgba(0, 0, 0, 0.38);
 }
+
 .SelectGroutColourName {
   padding-top: 12px;
 }
+
 .SelectGroutColourName .MuiTypography-root {
   font-weight: 400;
 }
+
+.GroutColorOptionContent {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.GroutColorOptionContent .NoGroutButton {
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.GroutColorOptionContent .NoGroutButton:hover {
+  background-color: #fff;
+}
+
+
+.line1 {
+  width: 250px;
+  height: 64px;
+  border-bottom: 2px solid #E53451;
+  transform: translateY(-50px) translateX(-7px) rotate(43deg);
+  position: absolute;
+  /* top: -20px; */
+}
+
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .PatternInfoBtn {
     min-height: 64px;
-}
+  }
+
   .GroutColourInner .MuiTypography-root svg {
     font-size: 14px;
   }
+
   .PatternInfoBtn.GroutWidth .MuiTypography-body2 {
     font-size: 12px;
   }
+
   .GroutContentBox {
     min-height: 250px;
-}
-.TileInfo {
-  padding-bottom: 5px;
-}
-.TileImage, .TileImageSecond {
-  min-height: 90px;
-}
-.GridRow.GridRowSecond {
-  padding: 20px 25px 0px 25px;
-}
-.SwipeableDrawerBox .MuiPaper-root.MuiDrawer-paper {
-  min-width: 100%;
-}
+  }
+
+  .TileInfo {
+    padding-bottom: 5px;
+  }
+
+  .TileImage,
+  .TileImageSecond {
+    min-height: 90px;
+  }
+
+  .GridRow.GridRowSecond {
+    padding: 20px 25px 0px 25px;
+  }
+
+  .SwipeableDrawerBox .MuiPaper-root.MuiDrawer-paper {
+    min-width: 100%;
+  }
 }

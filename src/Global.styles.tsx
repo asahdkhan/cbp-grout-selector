@@ -4,6 +4,9 @@ const Styles = () => {
   return (
     <GlobalStyles
       styles={{
+        '.NoUnderline': {
+          textDecoration: 'none!important',
+        },
         '.DialogHeadingBox': {
           display: 'flex',
           justifyContent: 'space-between',
@@ -24,6 +27,19 @@ const Styles = () => {
         '.MuiInputBase-input.MuiOutlinedInput-input': {
           padding: '6px 10px',
           height: 'auto',
+        },
+        '.MuiAutocomplete-root .MuiFormLabel-filled': {
+          display: 'none',
+        },
+        '.MuiAutocomplete-root .MuiOutlinedInput-root': {
+          padding: '0px 9px;'
+        },
+        '.MuiAutocomplete-root .MuiInputLabel-root': {
+          marginBottom: '0px',
+          transform: 'translate(14px, 22px) scale(1)',
+        },
+        'body .MuiAutocomplete-inputRoot': {
+          lineHeight: '14px',
         },
         '.MuiFormControl-root.MuiTextField-root': {
           width: '100%',

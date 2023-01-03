@@ -1,0 +1,31 @@
+.NavigationBox .NavigationArrow {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  max-height: 40px;
+}
+
+.NavigationArrow:hover,
+.NavigationArrow:focus {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
+
+.NavigationArrow:hover svg,
+.NavigationArrow:focus svg {
+  color: #E17512;
+}
+
+.NavigationBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.NavigationInfo h6 {
+  color: rgba(0, 0, 0, 0.38);
+}

@@ -1,45 +1,71 @@
 .homes {
   color: red;
 }
+
 body .BannerBox {
   background: url(../../assets/images/CBPTileGroutBanner.jpg) no-repeat;
   background-size: cover;
 }
-body .BannerBox, .BannerOverlay {
-  min-height: 400px;
-  }
+
+body .BannerBox,
 .BannerOverlay {
-  background:  rgba(0, 0, 0, 0.5);
+  min-height: 400px;
+}
+
+.BannerOverlay {
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 25px;
+  /* padding: 20px 25px; */
 }
+
+.BannerContainer {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.BannerContent {
+  padding: 20px 25px 0px 25px;
+}
+
+.BannerTitle .MainHeading {
+  white-space: nowrap;
+}
+
 .BannerTitle {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 body .MainHeading {
   color: #fff;
 }
+
 .BannerTitle img {
   margin-right: 10px;
 }
-.BannerSubTitle p, .BannerButton p {
+
+.BannerSubTitle p,
+.BannerButton p {
   color: #fff;
   text-align: center;
 }
+
 .BannerButton {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .BannerButton svg {
   color: #fff;
   margin-left: 10px;
   font-size: 30px;
 }
+
 .BannerSubTitle {
   margin-top: 25px;
   margin-bottom: 30px;
@@ -48,56 +74,23 @@ body .MainHeading {
   margin-left: auto;
   margin-right: auto;
 }
+
 .GridRow {
   padding: 50px 32px;
 }
+
 .HeadingSecond {
   text-align: center;
   padding-bottom: 50px;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
-body .RoomBox {
-  padding: 0;
-  border: none;
-  border-radius: 6px;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-}
-.RoomHeadingBox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background:  rgba(0, 0, 0, 0.5);
-  width: calc(100% - 50px);
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  padding: 8px 25px;
-}
-.RoomContent img {
-  border-radius: 6px;
-}
-body .RoomHeading {
-  color: #fff;
-  text-transform: capitalize;
-  font-weight: 500;
-}
-.RoomName {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding-top: 36px;
-}
-.RoomName .MuiTypography-root {
-  color:#fff;
-  font-weight: 600;
-  text-transform: capitalize;
-}
+
+
+
 
 body .TextParaSecond {
   padding-top: 25px;
@@ -107,22 +100,28 @@ body .TextParaSecond {
   margin-right: auto;
   display: table;
 }
+
 .TextCenter {
   text-align: center;
   justify-content: center;
 }
+
 .SelectBestGroutColor p {
   margin-bottom: 20px;
 }
+
 .ResourcesBox {
   margin-top: 20px;
 }
-.ResourcesBox li  {
-  margin-bottom: 10px;
+
+.ResourcesBox li {
+  margin-bottom: 25px;
 }
-.ResourcesBox li:last-child  {
+
+.ResourcesBox li:last-child {
   margin-bottom: 0px;
 }
+
 .ResourcesBox li a {
   display: flex;
   align-items: center;
@@ -133,89 +132,115 @@ body .TextParaSecond {
   font-weight: 600;
   text-decoration: none;
 }
+
 .ResourcesBox li a svg {
   margin-right: 10px;
 }
-.RoomItemBox .MuiButtonBase-root:hover {
-  border: none;
-  background-color: transparent;
+
+
+
+.BannerLogo {
+  background: rgba(255, 255, 255, 0.65);
+  text-align: center;
+}
+
+.BannerButton .MuiButtonBase-root {
+  border: 2px solid #E17512;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  max-width: 340px;
+  width: 100%;
+}
+
+.BannerButton .MuiButtonBase-root:hover {
+  border: 2px solid #E17512;
+}
+
+.GetStartedLink {
+  width: 100%;
+  max-width: 340px;
 }
 
 /* Responsive Code */
-@media only screen and (min-width: 2501px) and (max-width: 8000px) {
-}
-@media only screen and (min-width: 1920px) and (max-width: 2500px) {
-}
-@media only screen and (min-width: 1367px) and (max-width: 1919px) {
-}
-@media only screen and (min-width: 922px) and (max-width: 1155px) {
-}
-@media only screen and (min-width: 1281px) and (max-width: 1366px) {
-}
-@media only screen and (min-width: 1025px) and (max-width: 1500px) {
-}
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
-}
-@media only screen and (min-width: 922px) and (max-width: 1199px) {
-	}
-@media only screen and (min-width: 320px) and (max-width: 1199px) {
-}
-@media only screen and (min-width: 1025px) and (max-width: 1160px) {
-}
-@media only screen and (min-width: 1001px) and (max-width: 1024px) {
-}
-@media only screen and (min-width: 801px) and (max-width:1000px) {
-}
-@media only screen and (min-width: 769px) and (max-width:800px) {
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) { 
-}
-@media only screen and (min-width: 768px) and (max-width: 921px) { 
-}
-@media only screen and (min-width: 701px) and (max-width: 768px) {
-}
-@media only screen and (min-width: 667px) and (max-width: 700px) {
-}
-@media only screen and (min-width: 481px) and (max-width: 666px) {
-}
-@media only screen and (min-width: 415px) and (max-width: 480px) {
-}
-@media only screen and (min-width: 376px) and (max-width: 414px) {
-}
-@media only screen and (min-width: 320px) and (max-width: 375px) {
-}
+@media only screen and (min-width: 2501px) and (max-width: 8000px) {}
+
+@media only screen and (min-width: 1920px) and (max-width: 2500px) {}
+
+@media only screen and (min-width: 1367px) and (max-width: 1919px) {}
+
+@media only screen and (min-width: 922px) and (max-width: 1155px) {}
+
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {}
+
+@media only screen and (min-width: 1025px) and (max-width: 1500px) {}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {}
+
+@media only screen and (min-width: 922px) and (max-width: 1199px) {}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {}
+
+@media only screen and (min-width: 1025px) and (max-width: 1160px) {}
+
+@media only screen and (min-width: 1001px) and (max-width: 1024px) {}
+
+@media only screen and (min-width: 801px) and (max-width:1000px) {}
+
+@media only screen and (min-width: 769px) and (max-width:800px) {}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media only screen and (min-width: 768px) and (max-width: 921px) {}
+
+@media only screen and (min-width: 701px) and (max-width: 768px) {}
+
+@media only screen and (min-width: 667px) and (max-width: 700px) {}
+
+@media only screen and (min-width: 481px) and (max-width: 666px) {}
+
+@media only screen and (min-width: 415px) and (max-width: 480px) {}
+
+@media only screen and (min-width: 376px) and (max-width: 414px) {}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {}
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .ResourcesBox li a {
     justify-content: left;
     margin-left: inherit;
     margin-right: inherit;
     font-size: 14px;
-}
-.BannerTitle {
-  justify-content: left;
-}
+  }
 
-body .BannerBox, .BannerOverlay {
-min-height: 280px;
-}
-body .LoopRoomBox {
-  margin-bottom: 24px;
-}
-.GridRow {
-  padding: 30px 25px;
-}
-.HeadingSecond {
-  text-align: left;
-  padding-bottom: 25px;
-}
-.TextCenter {
-  text-align: left;
-  justify-content: left;
-}
-body .TextParaSecond {
-  text-align: left;
-}
-.LoopRoomBox:last-child {
-  margin-bottom: 0px;
-}
+  body .BannerBox,
+  .BannerOverlay {
+    min-height: 280px;
+  }
+
+  body .LoopRoomBox {
+    margin-bottom: 24px;
+  }
+
+  .GridRow {
+    padding: 30px 25px;
+  }
+
+  .HeadingSecond {
+    text-align: left;
+    padding-bottom: 25px;
+  }
+
+  .TextCenter {
+    text-align: left;
+    justify-content: left;
+  }
+
+  body .TextParaSecond {
+    text-align: left;
+  }
+
+  .LoopRoomBox:last-child {
+    margin-bottom: 0px;
+  }
 }

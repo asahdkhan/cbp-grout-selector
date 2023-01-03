@@ -6,6 +6,7 @@
 import React from 'react';
 import { Box, Grid, Typography, List, ListItem, Link, IconButton } from '@mui/material';
 import Dialog from '@mui/material/Dialog';
+import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -42,7 +43,7 @@ const AdditionalResources = () => {
                 href="https://www.custombuildingproducts.com/wp-content/uploads/2021/07/Grout_Color_Card.pdf"
                 target={'_blank'}
               >
-                <DescriptionOutlinedIcon /> View Grout Color Card
+                <PictureAsPdfOutlinedIcon /> View Grout Color Card
               </Link>
             </ListItem>
           </List>

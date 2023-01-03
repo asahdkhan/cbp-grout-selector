@@ -1,0 +1,118 @@
+.RoomContent.MuiBox-root {
+  display: inline-flex;
+}
+
+.RoomBox {
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  border: 3px solid transparent;
+  transition: all 1s ease;
+}
+
+.RoomItemBox {
+  display: inline-flex;
+}
+
+.RoomHeadingBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: calc(100% - 50px);
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 8px 25px;
+}
+
+.RoomContent img {
+  border-radius: 6px;
+}
+
+body .RoomHeading {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.RoomName {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 36px;
+  text-align: center;
+}
+
+.RoomName .MuiTypography-root {
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.RoomBox:hover,
+.RoomBox:focus,
+.RoomBox.Selected {
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid #E17512;
+  border-radius: 6px;
+  transition: all 1s ease;
+}
+
+.RoomBox:hover .RoomContent::before,
+.RoomBox:focus .RoomContent::before,
+.RoomBox.Selected .RoomContent::before {
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.RoomContent::before {
+  display: block;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.RoomBox .VisualizeButton {
+  font-weight: 500;
+}
+
+.RoomName .VisualizeButton img {
+  margin-right: 8px;
+}
+
+.VisualizeButton {
+  opacity: 0;
+  transition: all 1s ease;
+  display: none;
+}
+
+.RoomBox:hover .VisualizeButton,
+.RoomBox:focus .VisualizeButton,
+.RoomBox.Selected .VisualizeButton {
+  opacity: 1;
+  display: flex;
+  transition: all 1s ease;
+}
+
+.SceneName {
+  opacity: 1;
+  display: block;
+  transition: all 1s ease;
+}
+
+.RoomBox:hover .SceneName,
+.RoomBox.Selected .SceneName {
+  opacity: 0;
+  display: none;
+  transition: all 1s ease;
+}

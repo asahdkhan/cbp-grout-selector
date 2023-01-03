@@ -2,18 +2,22 @@
   height: 74px;
   padding: 0px 25px;
 }
+
 .headerRightSide {
   justify-content: flex-end;
   display: flex;
 }
+
 body .PasswordLabelBox {
   display: flex;
   justify-content: space-between;
 }
+
 .ForgotPassword {
   font-size: 12px;
   font-weight: 400;
 }
+
 .AlertMsgBox {
   display: flex;
   align-items: center;
@@ -24,80 +28,156 @@ body .PasswordLabelBox {
   margin-bottom: 20px;
   background: #FCF1E7;
 }
-.AlertMsgBox p, .AlertMsgBox svg {
-  color:  #E17512;
+
+.AlertMsgBox p,
+.AlertMsgBox svg {
+  color: #E17512;
 }
+
 .AlertMsgBox svg {
   margin-right: 8px;
 }
+
 .PasswordInfo {
   color: rgba(0, 0, 0, 0.6);
   font-size: 13px;
   font-weight: 400;
 }
+
 .AgreeCheckbox .MuiTypography-root {
   font-size: 13px;
   max-width: 250px;
 }
+
 .headerRightSide .MuiButtonBase-root:hover {
-  color:  #E17512;
+  color: #E17512;
   border: none;
 }
+
 /* .headerRightSide svg.MuiSvgIcon-root {
   font-size: 26px;
 } */
 .AccountDetailBtn svg {
-  color:#1F2127;
+  color: #1F2127;
   font-size: 25px;
 }
+
 .AccountBox .AccountHeading {
   color: #E17512;
 }
-.AccountTabContent .AccountDetails, .UpdateEmailInfo {
+
+.AccountTabContent .AccountDetails,
+.UpdateEmailInfo {
   padding-left: 25px;
   padding-right: 25px;
 }
+
 .AccountDetails .DeleteLink {
   padding: 0;
-  color:#D3314C;
+  color: #D3314C;
   margin-bottom: 15px;
   font-size: 16px;
 }
+
 .AccountDetails .DeleteLink:hover {
   border: none;
-  color:#1F2127;
+  color: #1F2127;
 }
+
 .TextFieldReadOnly .MuiInputBase-root.MuiInput-root.MuiInput-underline:before {
-  border-bottom: none!important;
+  border-bottom: none !important;
 }
+
 .TextFieldReadOnly .MuiInputBase-root.MuiInput-root:after {
-  border-bottom: none!important;
+  border-bottom: none !important;
 }
+
 .TextEditBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .FooterButton {
   display: flex;
   align-items: center;
 }
+
 .FooterButton>:not(:first-of-type) {
   margin-left: 8px;
 }
+
 .TextEditBox a {
   text-decoration: none;
   font-weight: 600;
 }
-.NoteBox { 
+
+.NoteBox {
   display: inline-block;
-   padding-left: 10px;
+  padding-left: 10px;
 }
+
+body .SavedScenes {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 25px;
+  margin-right: 25px;
+
+}
+
+.SavedScenesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.SavedScenes .GroutContentBox {
+  min-height: 250px;
+}
+
+.GroutColourSecond .TileImageSecond {
+  aspect-ratio: 1/1;
+  min-height: auto;
+}
+
+.SavedScenesGroutColor {
+  padding: 0px 15px 15px 15px;
+
+}
+
+.SavedScenesGroutColor h6 {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.GroutColourSecond h6,
+.SavedScenesHeader svg {
+  color: #000000;
+}
+
+.SavedScenesGroutJointWidth h6 {
+  margin-bottom: 10px;
+}
+
+.GroutColourSecond {
+  margin: 15px 0px;
+
+}
+
+.SavedScenesGroutJointWidth {
+  margin-top: 10px;
+}
+
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
-  .AgreeCheckbox .MuiTypography-root, .PasswordInfo {
+
+  .AgreeCheckbox .MuiTypography-root,
+  .PasswordInfo {
     font-size: 12px;
   }
+
   .TextEditBox a {
     font-size: 14px;
-}
+  }
 }

@@ -24,7 +24,9 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import CloseIcon from '@mui/icons-material/Close';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
+// import  bannerLogoIcon  from '../../assets/images/CBP-logo-banner.svg';
 import useAppHooks from '../../hooks/App.hooks';
+
 import './Home.styles.css';
 
 const HomeScreen = () => {
@@ -35,85 +37,35 @@ const HomeScreen = () => {
           <Grid item xs={12}>
             <Paper className="BannerBox">
               <Box className="BannerOverlay">
-                <Box>
-                  <Box className="BannerTitle">
-                    <img src={require('../../assets/images/BoxIcon.png')} alt="Box Icon" />
-                    <Typography variant="h1" className="MainHeading">
-                      Tile & Grout Visualizer
-                    </Typography>
+                <Box className='BannerContainer'>
+                  <Box className='BannerLogo'>
+                    {/* <BannerLogoIcon /> */}
+                    <img src={require('../../assets/images/CBP-Logo.png')} alt="Box Icon" />
                   </Box>
-                  <Box className="BannerSubTitle">
-                    <Typography variant="body1" className="BannerText">
-                      Whether you have a tile picked out or you are still looking for inspiration,
-                      use our vizualizer to find a grout that works for you.
-                    </Typography>
-                  </Box>
-                  <Box className="BannerButton">
-                    <Typography variant="body1">Choose an option below to get started</Typography>
+                  <Box className='BannerContent'>
+                    <Box className="BannerTitle">
+                      <img src={require('../../assets/images/BoxIcon.png')} alt="Box Icon" />
+                      <Typography variant="h1" className="MainHeading">
+                        Tile & Grout Visualizer
+                      </Typography>
+                    </Box>
+                    <Box className="BannerSubTitle">
+                      <Typography variant="body1" className="BannerText">
+                        Whether you have a tile picked out or you are still looking for inspiration,
+                        use our vizualizer to find a grout that works for you.
+                      </Typography>
+                    </Box>
+                    <Box className="BannerButton">
+
+                      <Link href='#/tile-selection' className='NoUnderline GetStartedLink'> <Button className='' color='primary' variant='outlined'>Get Started</Button></Link>
+                    </Box>
                   </Box>
                 </Box>
               </Box>
             </Paper>
           </Grid>
         </Grid>
-        <Grid container direction="row" columnSpacing={4} className="GridRow">
-          <Grid item xs={12}>
-            <Typography variant="h3" className="HeadingSecond">
-              ROOM SELECTIONS
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={4} className="LoopRoomBox">
-            <Box className="RoomItemBox">
-              <Button className="RoomBox">
-                <Box className="RoomContent">
-                  <img src={require('../../assets/images/CBPTileGroutBanner.jpg')} alt="" />
-                  <Box className="RoomHeadingBox">
-                    <Typography variant="h3" className="RoomHeading">
-                      Bathroom
-                    </Typography>
-                  </Box>
-                  <Box className="RoomName">
-                    <Typography variant="h4">Image placeholder</Typography>
-                  </Box>
-                </Box>
-              </Button>
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={4} className="LoopRoomBox">
-            <Box className="RoomItemBox">
-              <Button className="RoomBox">
-                <Box className="RoomContent">
-                  <img src={require('../../assets/images/CBPTileGroutBanner.jpg')} alt="" />
-                  <Box className="RoomHeadingBox">
-                    <Typography variant="h3" className="RoomHeading">
-                      Living Room
-                    </Typography>
-                  </Box>
-                  <Box className="RoomName">
-                    <Typography variant="h4">Image placeholder</Typography>
-                  </Box>
-                </Box>
-              </Button>
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={4} className="LoopRoomBox">
-            <Box className="RoomItemBox">
-              <Button className="RoomBox">
-                <Box className="RoomContent">
-                  <img src={require('../../assets/images/CBPTileGroutBanner.jpg')} alt="" />
-                  <Box className="RoomHeadingBox">
-                    <Typography variant="h3" className="RoomHeading">
-                      Kitchen
-                    </Typography>
-                  </Box>
-                  <Box className="RoomName">
-                    <Typography variant="h4">Image placeholder</Typography>
-                  </Box>
-                </Box>
-              </Button>
-            </Box>
-          </Grid>
-        </Grid>
+
       </Grid>
     </Grid>
   );

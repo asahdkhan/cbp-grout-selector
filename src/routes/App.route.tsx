@@ -3,9 +3,15 @@ import { RouteObject, useRoutes } from 'react-router-dom';
 import AppProvider from '../provider/App.context';
 import Home from '../screens/Home/Home.screen';
 import RenderGrout from '../screens/RenderGrout/RenderGrout.screen';
-import RoomScene from '../screens/RoomScene/RoomScene.screen';
+import TileSelection from '../screens/TileSelection/TileSelection.screen';
+import CropPhoto from '../screens/CropPhoto/CropPhoto.screen';
+import ConfigureTile from '../screens/ConfigureTile/ConfigureTile.screen';
+import ConfigureTileStep2 from '../screens/ConfigureTileStep2/ConfigureTileStep2.screen';
+import ConfigureTileStep3 from '../screens/ConfigureTileStep3/ConfigureTileStep3.screen';
 
-const RoomSceneRoutes = [{ path: 'abc', element: <div>Child</div> }];
+
+
+// const ConfigureTileStep3 = [{ path: 'abc', element: <div>Child</div> }];
 
 export const MainRoutes: RouteObject[] = [
   {
@@ -25,10 +31,28 @@ export const MainRoutes: RouteObject[] = [
     ),
   },
   {
-    path: 'room-scene',
-    element: <RoomScene />,
-    children: [...RoomSceneRoutes],
+    path: 'tile-selection',
+    element: <TileSelection />
   },
+  {
+    path: 'crop-photo',
+    element: <CropPhoto />,
+  },
+  {
+    path: 'configure-tile',
+    element: <ConfigureTile />,
+  },
+  {
+    path: 'configure-tile-step-2',
+    element: <ConfigureTileStep2 />,
+  },
+  {
+    path: 'configure-tile-step-3',
+    element: <ConfigureTileStep3 />,
+    // children: [...ConfigureTileStep3],
+  },
+
+
 ];
 
 const Route = () => useRoutes([...MainRoutes]);

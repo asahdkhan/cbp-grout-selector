@@ -5,6 +5,7 @@
 /* eslint-disable  */
 import * as React from 'react';
 import {
+  Grid,
   Box,
   Button,
   IconButton,
@@ -16,11 +17,15 @@ import {
   Paper,
   Tab,
   Tabs,
+  List,
+  ListItem,
+  Popover
 } from '@mui/material';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import './Header.styles.css';
 import CloseIcon from '@mui/icons-material/Close';
 import MainLogo from '../components/MainLogo/MainLogo.components';
+import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 // Start Tab Code
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -103,6 +108,8 @@ const AccountDetail = () => {
             <Tabs value={value} onChange={handleChangeTab} aria-label="basic tabs example">
               <Tab label="General" {...a11yProps(0)} />
               <Tab label="Saved Scenes" {...a11yProps(1)} />
+              <Tab label="Analytics" {...a11yProps(2)} />
+
             </Tabs>
           </Box>
           <Box className="TabContent AccountTabContent">
@@ -155,7 +162,7 @@ const AccountDetail = () => {
                   <Button
                     className="DeleteLink NoHoverBg"
                     endIcon={<DeleteOutlineIcon />}
-                    // onClick={props.onClickDeleteaccount}
+                  // onClick={props.onClickDeleteaccount}
                   >
                     Delete Account
                   </Button>
@@ -166,16 +173,110 @@ const AccountDetail = () => {
               </Box>
             </TabPanel>
             <TabPanel value={value} index={1}>
-              <Paper className="TileSelection">
-                <Typography variant="h6" className="TitleOption">
-                  <b>Compare Grout Colors</b>
-                </Typography>
+              <Paper className="SavedScenes">
+                <Box className="GroutCanvas">
+                  <Box
+                    className="GroutContentBox"
+                    style={{
+                      backgroundImage: `url(
+                      ${require(`../assets/images/CBPTileGroutBanner.jpg`)}
+                    )`,
+                    }}
+                  ></Box>
+                </Box>
+                <Box className='SavedScenesHeader'>
+                  <Typography variant='h4'>Kitchen</Typography>
+                  <IconButton aria-describedby={id} onClick={handleClick}><MoreHorizOutlinedIcon /></IconButton>
+                </Box>
+                <Popover
+                  id={id}
+                  open={opensecond}
+                  anchorEl={anchorEl}
+                  onClose={handleClose}
+                  anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'right',
+                  }}
+                  className="OptionsPopover"
+                >
+                  <Box className="OptionsPopoverBox">
+                    <List>
+
+
+                      <ListItem>
+                        <Link>
+                          Remove from saved scenes
+                        </Link>
+                      </ListItem>
+
+
+                    </List>
+                  </Box>
+                </Popover>
+                <Box className='SavedScenesGroutColor'>
+                  <Box>
+                    <Typography variant='h6'>Grout Colors</Typography>
+                    <Grid container direction="row" columnSpacing={4}>
+                      <Grid item xs={4}>
+                        <Box className="GroutColour GroutColourSecond" onClick={toggleDrawer(true)}>
+                          <Box
+                            className="TileImageSecond"
+                            style={{
+                              backgroundColor: `#787679`,
+                            }}
+                          >
+
+                          </Box>
+                          <Typography variant="h6" className="GroutName">
+                            <Box component="span">#11</Box>
+                            Snow White
+                          </Typography>
+                        </Box>
+                      </Grid>
+                      <Grid item xs={4}>
+                        <Box className="GroutColour GroutColourSecond" onClick={toggleDrawer(true)}>
+                          <Box
+                            className="TileImageSecond"
+                            style={{
+                              backgroundColor: `#787679`,
+                            }}
+                          >
+
+                          </Box>
+                          <Typography variant="h6" className="GroutName">
+                            <Box component="span">#11</Box>
+                            Snow White
+                          </Typography>
+                        </Box>
+                      </Grid>
+                      <Grid item xs={4}>
+                        <Box className="GroutColour GroutColourSecond" onClick={toggleDrawer(true)}>
+                          <Box
+                            className="TileImageSecond"
+                            style={{
+                              backgroundColor: `#787679`,
+                            }}
+                          >
+
+                          </Box>
+                          <Typography variant="h6" className="GroutName">
+                            <Box component="span">#11</Box>
+                            Snow White
+                          </Typography>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                  <Box className='SavedScenesGroutJointWidth'>
+                    <Typography variant='h6'>Grout Joint Width</Typography>
+                    <Typography variant='body2'>1/16” (1.6mm)</Typography>
+                  </Box>
+                </Box>
               </Paper>
-              <Paper className="TilePattern">
-                <Typography variant="h6" className="TitleOption">
-                  <b>Grout Joint Width</b>
-                </Typography>
-              </Paper>
+
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+
             </TabPanel>
           </Box>
         </Box>
