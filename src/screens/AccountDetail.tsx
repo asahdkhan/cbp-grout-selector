@@ -19,13 +19,19 @@ import {
   Tabs,
   List,
   ListItem,
-  Popover
+  Popover,
+  Autocomplete,
+  Table,
+  TableHead,
+  TableBody,
+  TableRow
 } from '@mui/material';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import './Header.styles.css';
 import CloseIcon from '@mui/icons-material/Close';
 import MainLogo from '../components/MainLogo/MainLogo.components';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
+import InfoIcon from '@mui/icons-material/Info';
 // Start Tab Code
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -276,7 +282,183 @@ const AccountDetail = () => {
 
             </TabPanel>
             <TabPanel value={value} index={2}>
+              <Paper className='AnalyticsBox'>
 
+                <Box className="CommonFormControl">
+                  <Autocomplete
+                    className='AnalyticDropdown'
+                    disablePortal
+                    options={tileshape}
+                    renderInput={(params) => <TextField {...params} label="Please Select" />}
+                  />
+                </Box>
+                <Box className='UsageSummaryBox UsageCommonBox'>
+                  <Table className='AnalyticTable'>
+                    <TableHead>
+                      <th>Usage Summary</th>
+                      <th className='Numbers'>Number</th>
+                    </TableHead>
+                    <TableBody>
+                      <TableRow>
+                        <td><Typography variant='h6'>Guest Users</Typography></td>
+                        <td className='Numbers'>46</td>
+                      </TableRow>
+                      <TableRow>
+                        <td><Typography variant='h6'>Registered Users</Typography></td>
+                        <td className='Numbers'>46</td>
+                      </TableRow>
+                      <TableRow>
+                        <td><Typography variant='h6'>Total Hits</Typography></td>
+                        <td className='Numbers'>46</td>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </Box>
+                <Box className='UsageSummaryBox UsageCommonBox'>
+                  <Table className='AnalyticTable'>
+                    <TableHead>
+                      <th>Grout Color Usage <InfoIcon className='InfoIcon' /></th>
+                      <th className='Numbers'>Number</th>
+                      <th className='Numbers'>% of Total</th>
+                    </TableHead>
+                    <TableBody>
+                      <TableRow>
+                        <td>
+                          <Box className='AnalyticsGroutColor'>
+                            <Typography variant='body2' className='SerialNumber'>1</Typography>
+                            <Box className='AnalyticsGroutColorBox' style={{
+                              backgroundColor: `#787679`,
+                            }}></Box>
+                            <Box className='AnalyticsGroutColorName'>
+                              <Typography variant='body2'>#11</Typography>
+                              <Typography variant='h6'>Snow White</Typography>
+                            </Box>
+                          </Box>
+                        </td>
+                        <td className='Numbers'>47</td>
+                        <td className='Numbers'>64%</td>
+                      </TableRow>
+                      <TableRow>
+                        <td>
+                          <Box className='AnalyticsGroutColor'>
+                            <Typography variant='body2' className='SerialNumber'>2</Typography>
+                            <Box className='AnalyticsGroutColorBox' style={{
+                              backgroundColor: `#787679`,
+                            }}></Box>
+                            <Box className='AnalyticsGroutColorName'>
+                              <Typography variant='body2'>#11</Typography>
+                              <Typography variant='h6'>Snow White</Typography>
+                            </Box>
+                          </Box>
+                        </td>
+                        <td className='Numbers'>47</td>
+                        <td className='Numbers'>64%</td>
+                      </TableRow>
+                      <TableRow>
+                        <td>
+                          <Box className='AnalyticsGroutColor'>
+                            <Typography variant='body2' className='SerialNumber'>3</Typography>
+                            <Box className='AnalyticsGroutColorBox' style={{
+                              backgroundColor: `#787679`,
+                            }}></Box>
+                            <Box className='AnalyticsGroutColorName'>
+                              <Typography variant='body2'>#11</Typography>
+                              <Typography variant='h6'>Snow White</Typography>
+                            </Box>
+                          </Box>
+                        </td>
+                        <td className='Numbers'>47</td>
+                        <td className='Numbers'>64%</td>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </Box>
+                <Box className='UsageSummaryBox UsageCommonBox'>
+                  <Table className='AnalyticTable'>
+                    <TableHead>
+                      <th>Tile Pattern Usage <InfoIcon className='InfoIcon' /></th>
+                      <th className='Numbers'>Number</th>
+                      <th className='Numbers'>% of Total</th>
+                    </TableHead>
+                    <TableBody>
+                      <TableRow>
+                        <td>
+                          <Box className='AnalyticsTilePattern'>
+                            <Typography variant='body2' className='SerialNumber'>1</Typography>
+                            <Box className='AnalyticsTilePatternBox' style={{
+                              backgroundImage: `url(
+                      ${require(`../assets/images/BrickUsageIcon.png`)}
+                    )`,
+                            }}></Box>
+
+                            <Box className='AnalyticsTilePatternName'>
+                              <Typography variant='h6'>Brick</Typography>
+                            </Box>
+                          </Box>
+                        </td>
+                        <td className='Numbers'>47</td>
+                        <td className='Numbers'>64%</td>
+                      </TableRow>
+                      <TableRow>
+                        <td>
+                          <Box className='AnalyticsTilePattern'>
+                            <Typography variant='body2' className='SerialNumber'>2</Typography>
+                            <Box className='AnalyticsTilePatternBox' style={{
+                              backgroundImage: `url(
+                      ${require(`../assets/images/AshlarUsageIcon.png`)}
+                    )`,
+                            }}></Box>
+
+                            <Box className='AnalyticsTilePatternName'>
+                              <Typography variant='h6'>Ashlar</Typography>
+                            </Box>
+                          </Box>
+                        </td>
+                        <td className='Numbers'>47</td>
+                        <td className='Numbers'>64%</td>
+                      </TableRow>
+                      <TableRow>
+                        <td>
+                          <Box className='AnalyticsTilePattern'>
+                            <Typography variant='body2' className='SerialNumber'>3</Typography>
+                            <Box className='AnalyticsTilePatternBox' style={{
+                              backgroundImage: `url(
+                      ${require(`../assets/images/MonolithicUsageIcon.png`)}
+                    )`,
+                            }}></Box>
+
+                            <Box className='AnalyticsTilePatternName'>
+                              <Typography variant='h6'>Monolithic</Typography>
+                            </Box>
+                          </Box>
+                        </td>
+                        <td className='Numbers'>47</td>
+                        <td className='Numbers'>64%</td>
+                      </TableRow>
+                      <TableRow>
+                        <td>
+                          <Box className='AnalyticsTilePattern'>
+                            <Typography variant='body2' className='SerialNumber'>4</Typography>
+                            <Box className='AnalyticsTilePatternBox' style={{
+                              backgroundImage: `url(
+                      ${require(`../assets/images/QuarterTurnUsageIcon.png`)}
+                    )`,
+                            }}></Box>
+
+                            <Box className='AnalyticsTilePatternName'>
+                              <Typography variant='h6'>Quarter Turn</Typography>
+                            </Box>
+                          </Box>
+                        </td>
+                        <td className='Numbers'>47</td>
+                        <td className='Numbers'>64%</td>
+                      </TableRow>
+
+                    </TableBody>
+                  </Table>
+                </Box>
+
+              </Paper>
             </TabPanel>
           </Box>
         </Box>
@@ -284,5 +466,9 @@ const AccountDetail = () => {
     </Paper>
   );
 };
-
+// Tile shape
+const tileshape = [
+  { label: 'Last Week' },
+  { label: 'This Week' },
+];
 export default AccountDetail;

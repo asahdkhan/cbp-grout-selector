@@ -170,6 +170,85 @@ body .SavedScenes {
   margin-top: 10px;
 }
 
+.AnalyticDropdown .MuiInputBase-root {
+  background-color: #fff;
+}
+
+body .MuiPaper-root.AnalyticsBox {
+  padding: 20px 25px;
+  background-color: #F1F3F9;
+}
+
+.AnalyticTable th:first-child {
+  color: #E17512;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+}
+
+.AnalyticTable th {
+  padding-bottom: 15px;
+}
+
+.AnalyticTable th {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+}
+
+.AnalyticTable td {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 10px 0px 10px 0px;
+
+}
+
+.UsageCommonBox {
+  background: #fff;
+  padding: 15px 12px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.AnalyticTable .Numbers {
+  text-align: right;
+}
+
+.AnalyticsGroutColorBox {
+  width: 40px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.AnalyticsGroutColor,
+.AnalyticsTilePattern {
+  display: flex;
+  align-items: center;
+}
+
+.AnalyticTable .SerialNumber,
+.AnalyticsGroutColorBox,
+.AnalyticsTilePatternBox {
+  margin-right: 15px;
+}
+
+.AnalyticsTilePatternBox {
+  min-width: 42px;
+  min-height: 42px;
+  background-repeat: no-repeat;
+}
+
+.AnalyticsGroutColorName .MuiTypography-body2 {
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.AnalyticTable .InfoIcon {
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
 
   .AgreeCheckbox .MuiTypography-root,
